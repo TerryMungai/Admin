@@ -1,87 +1,39 @@
-$(document).ready(function(){
-    var adjustSidebar = function(){
-        &(".sidebar").slimScroll({ heigth: document.documentElement.clientHeight -$(".navbar").outerHeight()
-        });
-    };
-    adjustSidebar();
-    $(window).resize(function(){
-        adjustSidebar();
+document.addEventListener("DOMContentLoaded", function(event) {
+
+    const showNavbar = (toggleId, navId, bodyId, headerId) =>{
+    const toggle = document.getElementById(toggleId),
+    nav = document.getElementById(navId),
+    bodypd = document.getElementById(bodyId),
+    headerpd = document.getElementById(headerId)
+    
+    // Validate that all variables exist
+    if(toggle && nav && bodypd && headerpd){
+    toggle.addEventListener('click', ()=>{
+    // show navbar
+    nav.classList.toggle('show')
+    // change icon
+    toggle.classList.toggle('bx-x')
+    // add padding to body
+    bodypd.classList.toggle('body-pd')
+    // add padding to header
+    headerpd.classList.toggle('body-pd')
+    })
+    }
+    }
+    
+    showNavbar('header-toggle','nav-bar','body-pd','header')
+    
+    /*===== LINK ACTIVE =====*/
+    const linkColor = document.querySelectorAll('.nav_link')
+    
+    function colorLink(){
+    if(linkColor){
+    linkColor.forEach(l=> l.classList.remove('active'))
+    this.classList.add('active')
+    }
+    }
+    linkColor.forEach(l=> l.addEventListener('click', colorLink))
+    
+    // Your code to run since DOM is loaded and ready
     });
-    $(".sideMenuToggler").on("click", function(){
-        $(".wrapper").toggleClass("active");
-    });
-});
 
-
-
-Highcharts.chart('container', {
-  chart: {
-    type: 'scatter',
-    margin: [70, 50, 60, 80],
-    events: {
-      click: function (e) {
-        // find the clicked values and the series
-        var x = Math.round(e.xAxis[0].value),
-          y = Math.round(e.yAxis[0].value),
-          series = this.series[0];
-
-        // Add it
-        series.addPoint([x, y]);
-
-      }
-    }
-  },
-  title: {
-    text: 'User supplied data'
-  },
-  subtitle: {
-    text: 'Click the plot area to add a point. Click a point to remove it.'
-  },
-  accessibility: {
-    announceNewData: {
-      enabled: true
-    }
-  },
-  xAxis: {
-    gridLineWidth: 1,
-    minPadding: 0.2,
-    maxPadding: 0.2,
-    maxZoom: 60
-  },
-  yAxis: {
-    title: {
-      text: 'Value'
-    },
-    minPadding: 0.2,
-    maxPadding: 0.2,
-    maxZoom: 60,
-    plotLines: [{
-      value: 0,
-      width: 1,
-      color: '#808080'
-    }]
-  },
-  legend: {
-    enabled: false
-  },
-  exporting: {
-    enabled: false
-  },
-  plotOptions: {
-    series: {
-      lineWidth: 1,
-      point: {
-        events: {
-          click: function () {
-            if (this.series.data.length > 1) {
-              this.remove();
-            }
-          }
-        }
-      }
-    }
-  },
-  series: [{
-    data: [[20, 20], [80, 80]]
-  }]
-});

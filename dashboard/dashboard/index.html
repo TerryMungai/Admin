@@ -5,7 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Dashboard</title>
-        
+     
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1-beta1/dist/js/bootstrap.bundle.min.js"
+        rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+      rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
@@ -22,7 +27,8 @@
         
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top">
+      <script type="text/javascript" src="script.js"></script>
+        <!-- <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top">
           <button class="navbar-toggler sideMenuToggler" type="button">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -47,48 +53,23 @@
               </ul>
               
             </div>
-          </nav>
-          <div class="wrapper d-flex">
-          <div class="sideMenu bg-mattBlackLight">
-            <div class="logo">
-              <img src="images/logo.png"height=40px; width="160px;">
+          </nav> -->
+
+          <body id="body-pd">
+            <header class="header" id="header">
+                <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+                <div class="header_img"> <img src="images/logoo.png" alt=""> </div>
+            </header>
+            <div class="l-navbar" id="nav-bar">
+                <nav class="nav">
+                    <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">DoveNest</span> </a>
+                        <div class="nav_list"> <a href="#" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> <a href="#" class="nav_link"> <i class='bx bx-group nav_icon'></i> <span class="nav_name">Groups</span> </a> <a href="#" class="nav_link"> <i class='bx bx-group nav_icon'></i> <span class="nav_name">New Group</span> </a> <a href="#" class="nav_link"> <i class='bx bx-group nav_icon'></i> <span class="nav_name">View Group</span> </a> <a href="#" class="nav_link"> <i class='bx bx-plus nav_icon'></i> <span class="nav_name">Add group admin</span> </a><a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Chart</span> </a> </div>
+                    </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+                </nav>
             </div>
-          <div class="sidebar">  
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <strong>Tools</strong>
-             <a href="#" class="nav-link px-2"><i class="material-icons icon">dashboard</i><span class="text">Dashboard</span></a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link px-2"><i class="material-icons icon">person</i><span class="text"><a href="home.html">Admin Login</span></a>
-             </li>
-             <li class="nav-item">
-              <a href="" class="nav-link px-2"><i class="material-icons icon">groups</i><span class="text">Groups</span></a>
-             </li>
-             <li class="nav-item">
-              <a href="#" class="nav-link px-2"><i class="material-icons icon">group</i><span class="text">New Group</span></a>
-             </li>
-             <li class="nav-item">
-              <a href="#" class="nav-link px-2"><i class="material-icons icon">group</i><span class="text">View Group</span></a>
-             </li>
-             <li class="nav-item">
-              <a href="#" class="nav-link px-2"><i class="material-icons icon">add</i><span class="text">Add group admin</span></a>
-             </li>
-             <strong>Others</strong>
-             <li class="nav-item">
-              <a href="#" class="nav-link px-2"><i class="material-icons icon">insert_chart</i><span class="text">Chart</span></a>
-             </li>
-             <li class="nav-item">
-              <a href="#" class="nav-link sideMenuToggler"><i class="material-icons icon">view_list</i><span class="text">Resize</span></a>
-             </li>
-          
-         </ul>
-         </div>
-         </div>
-         </div>
-         <div class="container-fluid">
-           <div class="row no-gutter">
-             </div>
+        
+    
+<!--          
         <div class="container">
           <div class="card-columns">
             <div class="card bg-white">
@@ -97,33 +78,14 @@
                   <button type="button" class="btn btn-rounded "><i class="fas fa-group pr-2" aria-hidden="true"></i>Groups<br><br></button>
                   <button type="button" class="btn btn-rounded "><i class="far fa-premium pr-2" aria-hidden="true"></i>Premium<br> 20000</button>
                   <button type="button" class="btn btn-rounded "><i class="fab fa-claims pr-2" aria-hidden="true"></i>Claims<br> 20</button>
-                  <i class="fas fa-chart-line"></i> 
-                  <figure class="css-chart" style="--widget-size: 200px;">
-                    <ul class="line-chart">
-                      <li style="--x: 40px; --y: 83.3333px;">
-                        <div class="data-point" data-value="25"></div>
-                        <div class="line-segment" style="--hypotenuse: 123.33333333333333; --angle:-71.07535558394876;"></div>
-                      </li>
-                      <li style="--x: 80px; --y: 200px;">
-                        <div class="data-point" data-value="60"></div>
-                        <div class="line-segment" style="--hypotenuse: 64.03124237432849; --angle:51.34019174590991;"></div>
-                      </li>
-                      <li style="--x: 120px; --y: 150px;">
-                        <div class="data-point" data-value="45"></div>
-                        <div class="line-segment" style="--hypotenuse: 43.333333333333336; --angle:-22.61986494804045;"></div>
-                      </li>
-                      <li style="--x: 160px; --y: 166.667px;">
-                        <div class="data-point" data-value="50"></div>
-                        <div class="line-segment" style="--hypotenuse: 52.068331172711055; --angle:39.805571092265225;"></div>
-                      </li>
-                      <li style="--x: 200px; --y: 133.333px;">
-                        <div class="data-point" data-value="40"></div>
-                        <div class="line-segment" style="--hypotenuse: 0; --angle:0;"></div>
-                      </li>    
-                    </ul>
-                  </figure>
-                  
-                  
+                 
+                  <div><br></div><br>
+                  <div><br></div><br>
+                  <div><br></div><br>
+                  <div><br></div><br>
+                  <div><br></div><br>
+                  <div><br></div><br>
+                  <div><br></div>
                 </div>
               </div>
             </div>
@@ -141,25 +103,138 @@
               <div class="card-body text-center">
                 <div class="new"><p><strong>New Group</strong>
                 </div>
-                <ul class="no-bullets">
-                  <li>Name</li><br>
-                  <li>Type</li><br>
-                  <li>Registration ID</li><br>
-                  <li>Account</li>
-                </ul>
-                <div class="new-group">
-                  <div class="form-grroup mb-3"><input id="name" type="text" placeholder="" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4"></div>
-                  <div class="form-grroup mb-3"><input id="name" type="text" placeholder="" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4"></div>
-                  <div class="form-grroup mb-3"><input id="name" type="text" placeholder="" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4"></div>
-                  <div class="form-grroup mb-3"><input id="name" type="text" placeholder="" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4"></div>
-                  <div class="submit"><button type="button" class="btn btn-rounded "><i class="fas fa-group pr-2" aria-hidden="true"></i>Submit</button></div></div>
-                </div>
+
+                <form>
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-lg-2 col-form-label">Name</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="text">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputtype" class="col-lg-2 col-form-label">Type</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="inputType">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputID" class="col-sm-2 col-form-label">Reg ID</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="RegistrationID">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputAccount" class="col-lg-2 col-form-label">Account</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="inputAccount">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-lg-10">
+                      <div class="submit"><button type="button" class="btn btn-rounded "><i class="fas fa-group pr-2" aria-hidden="true"></i>Submit</button></div></div>
+                      
+                    </div>
+                  </div>
+                </form>
+                
                 <div><br></div><br>
                
             </div>
             </div>
-            </div>
-            <div class="view-group">
+            </div> -->
+
+
+
+
+
+            <div class="row mt-3 p-2 g-3 d-flex justify-content-center">
+              <div class="col-md-4">
+                  <div class="card2 p-2 py-3">
+                    <div class="text-center d-flex flex-row ">
+                        <button class="button button1">Groups<br><br></button>
+                         <button class="button button2">Premium <br>20000</button>
+                          <button class="button button3">Claims <br>20</button>
+                        
+                       </div> 
+                       
+                       <div><br></div><br>
+                  <div><br></div><br>
+                  <div><br></div><br>
+                  <div><br></div><br>
+                  <div><br></div><br>
+                  <div><br></div><br>
+                  <div><br></div>
+                  <div><br></div>
+                  <div><br></div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="card2 p-2 py-3">
+                      <div class=" d-flex flex-column ">
+                        
+                        <div class="groups"><p><strong>Groups</strong><button class="btn  btn-lg float-right" type="submit">New Group</button></p>  
+                        </div>
+                        <div class="type"><p>Name Type</p> <button type="button" class="btn btn-rounded "><i class="fas fa-group pr-2" aria-hidden="true"></i>View</button></div>
+                        <div class="type2"><p>Mobidev Company</p> <button type="button" class="btn btn-rounded "><i class="fas fa-group pr-2" aria-hidden="true"></i>View</button></div> 
+                        <div class="delete"><button type="button" class="btn btn-rounded "><i class="fas fa-group pr-2" aria-hidden="true"></i>delete</button></div></div>
+                        <div><br></div><br>
+                        <div><br></div><br> 
+                      </div>
+                  
+              </div>
+              <div class="col-md-4">
+                  <div class="card2 p-2 py-3">
+                      <div class="text-center d-flex flex-column ">
+                        <div class="new"><p><strong>New Group</strong>
+                        </div>
+        
+                        <form>
+                          <div class="form-group row">
+                            <label for="inputEmail3" class="col-lg-2 col-form-label">Name</label>
+                            <div class="col-lg-10">
+                              <input type="text" class="form-control" id="text">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="inputtype" class="col-lg-2 col-form-label">Type</label>
+                            <div class="col-lg-10">
+                              <input type="text" class="form-control" id="inputType">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="inputID" class="col-sm-2 col-form-label">Reg ID</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="RegistrationID">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="inputAccount" class="col-lg-2 col-form-label">Account</label>
+                            <div class="col-lg-10">
+                              <input type="text" class="form-control" id="inputAccount">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-lg-10"> <div><br></div>
+                            <div><br></div>
+                            
+                            
+                              <div class="submit"><button type="button" class="btn btn-rounded "><i class="fas fa-group pr-2" aria-hidden="true"></i>Submit</button></div></div>
+                              
+                            </div>
+                          </div>
+                        </form> 
+                        <div><br></div>
+                        <div><br></div>
+                       
+                        
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+          <!-- <div class="view-group">
             <div class="card bg-white">
               <div class="card-body text-center">
                 <div class="admin"><p><strong>View Group</strong><button class="btn  btn-lg float-right" type="submit">Add Admin</button></p>  
@@ -183,26 +258,45 @@
               <div class="card-body text-center">
                 <div class="new"><p><strong>New Group</strong>
                 </div>
-                <ul class="no-bullets">
-                  <li>Name:</li><br>
-                  <li>Phone:</li><br>
-                  <li>Email:</li><br>
-                  <li>Position</li><br>
-                  <li>ID:</li>
-                </ul>
-                <div class="new-group">
-                  <div class="form-grroup mb-3"><input id="name" type="text" placeholder="" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4"></div>
-                  <div class="form-grroup mb-3"><input id="name" type="text" placeholder="" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4"></div>
-                  <div class="form-grroup mb-3"><input id="name" type="text" placeholder="" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4"></div>
-                  <div class="form-grroup mb-3"><input id="name" type="text" placeholder="" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4"></div>
-                  <div class="form-grroup mb-3"><input id="name" type="text" placeholder="" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4"></div>
 
-                </div>
+                <form>
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-lg-2 col-form-label">Name</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="text">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPhone" class="col-lg-2 col-form-label">Phone</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="inputPhone">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="inputEmail3">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPosition" class="col-lg-2 col-form-label">Position</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="inputPosition">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputID" class="col-lg-2 col-form-label">ID</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="inputID">
+                    </div>
+                  </div>
+                  
+                </form>
                 <div><br></div><br>
                </div>
             </div>
             </div>
             </div>
-          </div> 
+          </div>   -->
     </body>
 </html>
