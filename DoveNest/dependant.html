@@ -1,0 +1,156 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Dashboard</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1-beta1/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1-beta1/dist/js/bootstrap.bundle.min.js"
+        rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+        rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+  
+        <link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"
+        rel="stylesheet">
+        <!-- Bootstrap core JavaScript-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+        <!-- Page level plugin JavaScript--><script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script> 
+        
+        <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+          <link rel="stylesheet" href="css/main.css"> 
+    </head>
+    <body>
+        <body id="body-pd">
+            <header class="header" id="header">
+                <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+                <div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div>
+            </header>
+            <div class="l-navbar" id="nav-bar">
+                <nav class="nav">
+                    <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">BBBootstrap</span> </a>
+                        <div class="nav_list"> <a href="dashboard.html" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> <a href="groups.html" class="nav_link"> <i class='bx bx-group nav_icon'></i> <span class="nav_name">Groups</span> </a> <a href="policy.html" class="nav_link"> <i class='bx bx-book nav_icon'></i> <span class="nav_name">Policy plans</span> </a> </div>
+                    </div> <a href="index.html" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+                </nav>
+            </div>
+            <form>
+                </div><br>
+                <h4><light>Groups / Test / Jayjay JJ</light></h4>
+                <div class="card">
+                  <div class="card-body">
+                      <h4><strong>Jayjay JJ</strong><button class="btn btn-primary shadow my-button w-xs indigo float-right bx bx-user  "><a href="new.html">Add Dependant</a></button></h4><br>
+                      <ul class="no-bullets">
+                        <li>Phone: 0729861869</li>
+                        <li>National id:12345678</li>
+                        <li>Role:group admin</li>
+                        <li>Email:jj@devs.mobi</li>
+                        <li>Registration: 2021-07-10 14:05:45</li>
+                      </ul>
+                        </div>
+                  </div>
+                </div>
+              </form><br>
+              <div class="card">
+                <div class="card-body">
+                    <div class="container"></div>
+                      <table class="table" id="dataTable" width="100%" cellspacing="0">
+
+                            <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="dataTable_length"><label>Show <select name="dataTable_length" aria-controls="dataTable" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="9">9</option><option value="8">8</option><option value="7">7</option><option value="6">6</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option></select> entries</label></div></div><div class="col-sm-12 col-md-6"><div id="dataTable_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="dataTable"></label></div></div></div><div class="row"><div class="col-sm-12"><table class="table dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;"> 
+                          <thead>
+                              <tr>
+                                  <th>NAME</th>
+                                  <th>TYPE</th>
+                                  <th>DOCUMENT TYPE</th>
+                                  <th>DOCUMENT NO</th>
+                                  <th>REGISTRATION DATE</th>
+                                  <th>ACTION</th>
+                              </tr>
+                          </thead>
+                          <tfoot>
+                              <tr>
+                                  <th></th>
+                                  <th></th>
+                                  <th></th>
+                                  <th></th>
+                                  <th></th>
+                              </tr>
+                          </tfoot>
+                          <tbody>
+                              <tr>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>No data available in the table</td>
+                                  <td><div class="action"><div class="page-content page-container" id="page-content">
+                                      <div class="padding">
+                                           
+                                          <div class="row container d-flex"> <button type="button" class="btn btn-primary btn-icon-text"> <i class="fa fa-eye btn-icon-prepend"></i> View </button> <button type="button" class="btn btn-success btn-icon-text"><i class="fa fa-pencil btn-icon-append"></i>Edit</i> </button> <button type="button" class="btn btn-danger btn-icon-text"><i class="fa fa-trash-o btn-icon-prepend">Delete </i></button></div>
+                                      </div>
+                                  </div></div></td>
+                              </tr>
+                             
+                             
+                    
+                          </tbody>
+                      </table>
+                      <div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers float-right" id="dataTable_paginate"><ul class="pagination"><li class="paginate_button page-item previous" id="dataTable_previous"><a href="dashboard.html" aria-controls="dataTable" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="dataTable" ></a></li><li class="paginate_button page-item next " id="dataTable_next"></li><a href="create.html" aria-controls="dataTable" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li></ul></div></div></div>
+                  </div>
+                      </div>
+                </div>
+              </div>
+              
+        </body>
+        </html>
+
+      <script>
+         document.addEventListener("DOMContentLoaded", function(event) {
+const showNavbar = (toggleId, navId, bodyId, headerId) =>{
+const toggle = document.getElementById(toggleId),
+nav = document.getElementById(navId),
+bodypd = document.getElementById(bodyId),
+headerpd = document.getElementById(headerId)
+
+// Validate that all variables exist
+if(toggle && nav && bodypd && headerpd){
+toggle.addEventListener('click', ()=>{
+// show navbar
+nav.classList.toggle('show')
+// change icon
+toggle.classList.toggle('bx-x')
+// add padding to body
+bodypd.classList.toggle('body-pd')
+// add padding to header
+headerpd.classList.toggle('body-pd')
+})
+}
+}
+
+showNavbar('header-toggle','nav-bar','body-pd','header')
+
+/*===== LINK ACTIVE =====*/
+const linkColor = document.querySelectorAll('.nav_link')
+
+function colorLink(){
+if(linkColor){
+linkColor.forEach(l=> l.classList.remove('active'))
+this.classList.add('active')
+}
+}
+linkColor.forEach(l=> l.addEventListener('click', colorLink))
+
+// Your code to run since DOM is loaded and ready
+}); 
+      </script> 
+
+      <script>
+        $(document).ready(function() {
+$('#example').DataTable();
+} );
+      </script>
